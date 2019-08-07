@@ -353,8 +353,9 @@ input[type="checkbox"]:checked+.checkbox-label {
 .text,
 .icon {
     display: block;
-    padding: 5px 0;
+    padding: 1%;
     text-align: center;
+
 }
 
 /* RANGE INPUT */
@@ -900,9 +901,9 @@ input[type=range]::-ms-track {
 }
 
 .service-txt h5 span {
-    background: #19adf2;
+    background: #eeeeee;
     font-weight: 600;
-    color: #fff;
+    color: #000;
     padding: 0 4px;
 }
 

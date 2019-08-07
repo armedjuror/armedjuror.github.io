@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ubuntu
- * Date: 7/8/19
- * Time: 8:32 PM
- */
+$con = mysqli_connect("localhost","root","root","ajwad");
+
+// Check connection
+if (mysqli_connect_errno())
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+if (isset($_POST['submit'])){
+    $name=$_POST['name']
+}
+
+?>
