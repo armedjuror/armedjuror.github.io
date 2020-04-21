@@ -1,0 +1,76 @@
+@import url(../fonts/fonts.css);
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body {
+    font-family: montesserat, serif;
+    background: url("../images/bg1.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.wrapper{
+    margin: 150px 75px;
+    width: 90%;
+    background: none;
+    color: white;
+    display: block;
+    text-align: center;
+}
+.wrapper h1{
+    font-family: chalk;
+    font-size: 3em;
+}
+.row{
+    display: flex;
+}
+.card{
+    max-width: 300px;
+    min-height: 150px;
+    border: 4px dashed #ffffff;
+    border-radius: 12px 50px 2px 8px;
+    font-family: chalk, serif;
+    padding: 1%;
+    text-align: center;
+    margin: 75px auto;
+}
+.card p{
+    line-height: 3em;
+    font-size: 1.2em;
+}
+.card a{
+    color: #999;
+    font-weight: bold;
+    padding: 1%;
+    font-size: 1.7em;
+}
+.head{
+    font-family:crayon;
+    font-size: 2em;
+}
+#first{
+        transform: rotate(-10deg);
+}
+#third{
+    transform: rotate(15deg);
+}
+#fourth{
+    transform: rotate(10deg);
+}
+#fifth{
+    transform: rotate(-15deg);
+}
+@media (max-width: 1400px){
+    .row{
+        display: block;
+    }
+}
+@media (max-width: 519px){
+    .wrapper{
+        margin: 0 auto;
+    }
+    .card{
+        width: 80%;
+    }
+}

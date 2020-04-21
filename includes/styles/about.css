@@ -1,0 +1,133 @@
+@import url(../fonts/fonts.css);
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background: url("../images/bg2.jpg")no-repeat fixed;
+    background-size: cover;
+    font-family: montesserat;
+}
+.wrapper{
+    width: 600px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 8px;
+    margin: 20vh 0 0 10%;
+    display: grid;
+}
+.head{
+    display: inline-block;
+    height: 20px;
+    margin: 10px 10px;
+}
+.head .controls{
+    display: flex;
+    float: left;
+}
+.head .close{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #eb2828;
+    color: rgba(0,0,0,0.8);
+}.head .close div, .head .minimize div, .head .maximize div{
+    background-color: rgba(0,0,0,0.8);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px 5px;
+    position: relative;
+    visibility: hidden;
+}
+.head .close:hover > div, .head .minimize:hover > div, .head .maximize:hover > div{
+    visibility: visible;
+}
+.head .minimize{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gold;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.head .maximize{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.heading{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    font-family: courier;
+    padding-top: 3px;
+}
+.content{
+    margin: 0 5px 5px 5px;
+    background: rgba(66,66,66,0.4);
+    top: 0;
+    border-radius: 8px;
+    padding: 2%;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-right: 8px solid goldenrod;
+}
+.aboutHead{
+    line-height: 150px;
+    font-family: montesserat, serif;
+    font-weight: bolder;
+    font-size: 2.2em;
+    margin: 0 50px;
+}
+p{
+    line-height: 22px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+p a{
+    color: #999;
+}.headBtn{
+    border: none;
+    background-color: rgba(66, 66, 66,0.8);
+    color: wheat;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 20px 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}.headBtn:hover{
+    background-color: rgba(66, 66, 66,1);
+    color: #0084ff;
+}
+@media (max-width: 768px){
+    .wrapper{
+       margin: 20vh auto; 
+       width: 90%;
+    }
+    .row{
+        display: block;
+    }
+    .headBtn{
+        margin: 20px 5px;
+        clear: both;
+    }
+}

@@ -1,0 +1,58 @@
+@import url(../fonts/fonts.css);
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body {
+    font-family: montesserat, serif;
+    background: url("../images/banner.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+/* header */
+.header{
+    margin: 30vh 0 0 20% ;
+    color: white;
+    padding-top: 5%;
+}
+.header p{
+    font-family: courier, monospace;
+    font-size: 2em;
+    padding:20px 0;
+    text-transform: capitalize;
+}.header p .blinker{
+    animation: blink 0.75s steps(2, start) infinite;
+    -webkit-animation: blink 0.75s steps(2, start) infinite;
+}@keyframes blink{
+    to{visibility: hidden;}
+}@-webkit-keyframes blink{
+    to{visibility: hidden;}
+}
+.header h1{
+    font-size: 3em;
+    font-family: exo, serif;
+    color: #0084ff;
+}
+.headBtn{
+    border: none;
+    background-color: rgba(66, 66, 66,0.8);
+    color: wheat;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 20px 20px 0 0;
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}.headBtn:hover{
+    background-color: rgba(66, 66, 66,1);
+    color: white;
+}
+
+@media (max-width: 450px){
+    .header{
+        margin: 30vh 0 0 8%;
+    }
+}
