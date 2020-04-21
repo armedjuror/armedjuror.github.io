@@ -68,7 +68,7 @@ body {
 }
 @media (max-width: 519px){
     .wrapper{
-        margin: 0 auto;
+        margin: 100px auto;
     }
     .card{
         width: 80%;
