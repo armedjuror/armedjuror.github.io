@@ -1,0 +1,24 @@
+@font-face{
+    font-family: montesserat;
+    src: url('./Montserrat-Regular.otf');
+}
+@font-face{
+    font-family: courier;
+    src: url('Courier\ Prime.ttf');
+}
+@font-face{
+    font-family: quicksand;
+    src: url('Quicksand-Regular.otf');
+}
+@font-face{
+    font-family: exo;
+    src: url('Exo2-Light.otf');
+}
+@font-face{
+    font-family: crayon;
+    src: url('Black\ Crayon.ttf');
+}
+@font-face{
+    font-family: chalk;
+    src: url('DK\ Borrowdale.otf');
+}

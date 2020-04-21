@@ -1,0 +1,114 @@
+@import url(../fonts/fonts.css);
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body {
+    font-family: montesserat, serif;
+    background: url("../images/bg3.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 800px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 8px;
+    margin: 20vh auto;
+    display: grid;
+}
+.head{
+    display: inline-block;
+    height: 20px;
+    margin: 10px 10px;
+}
+.head .controls{
+    display: flex;
+    float: left;
+}
+.head .close{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #eb2828;
+    color: rgba(0,0,0,0.8);
+}.head .close div, .head .minimize div, .head .maximize div{
+    background-color: rgba(0,0,0,0.8);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px 5px;
+    position: relative;
+    visibility: hidden;
+}
+.head .close:hover > div, .head .minimize:hover > div, .head .maximize:hover > div{
+    visibility: visible;
+}
+.head .minimize{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gold;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.head .maximize{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.heading{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    font-family: courier;
+    padding-top: 3px;
+}
+.content{
+    margin: 0 5px 5px 5px;
+    background: rgba(66,66,66,0.4);
+    top: 0;
+    border-radius: 8px;
+    padding: 2%;
+    color: #fff;
+    font-size: 1.2em;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.content dl{
+    list-style: none;
+}
+.content dl dt{
+    padding-top: 20px;
+}
+.content dl dt span{
+    color: cyan;
+    font-weight: bold;
+}
+.content dl dd{
+    padding-top: 10px;
+}
+.content a{
+    color: #999999;
+}
+
+@media (max-width: 850px){
+    .wrapper{
+        width: 95%;
+    }.row{
+        display: block;
+    }.head{
+        display: block;
+    }
+}
