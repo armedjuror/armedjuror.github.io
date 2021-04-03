@@ -18,11 +18,12 @@ nav {
 #menu,
 #menuBtn {
     float: left;
-    color: #0084ff;
+    color: #fff;
     font-size: 2.5em;
     line-height: 100px;
     margin: 0 30px;
     z-index: 2;
+    text-shadow: #fff;
 }
 #menu {
     display: none;
@@ -53,12 +54,12 @@ nav ul li a {
     line-height: 100px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #0084ff;
+    color: #b5babd;
     transition: 0.5s ease;
 }
 nav ul li a:hover,
 .active {
-    color: #6f00ff;
+    color: #fff;
 }
 #menu:checked ~ ul{
     left: 0;

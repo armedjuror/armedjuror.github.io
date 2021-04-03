@@ -6,12 +6,12 @@
 }
 body {
     font-family: montesserat, serif;
-    background: url("../images/bg3.jpg") no-repeat fixed;
+    background: url("../images/bg4.jpg") no-repeat fixed;
     background-size: cover;
 }
 
 .wrapper{
-    width: 800px;
+    max-width: 800px;
     background: rgba(0,0,0,0.8);
     color: white;
     box-shadow: 5px 5px 5px #000000;
@@ -21,7 +21,7 @@ body {
 }
 .head{
     display: inline-block;
-    height: 20px;
+    min-height: 20px;
     margin: 10px 10px;
 }
 .head .controls{
@@ -81,6 +81,8 @@ body {
     padding: 2%;
     color: #fff;
     font-size: 1.2em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .row{
     display: flex;
@@ -93,7 +95,7 @@ body {
     padding-top: 20px;
 }
 .content dl dt span{
-    color: cyan;
+    color: rgb(27, 131, 1);
     font-weight: bold;
 }
 .content dl dd{
@@ -105,7 +107,8 @@ body {
 
 @media (max-width: 850px){
     .wrapper{
-        width: 95%;
+        max-width: 95%;
+        overflow-wrap: break-word;
     }.row{
         display: block;
     }.head{
