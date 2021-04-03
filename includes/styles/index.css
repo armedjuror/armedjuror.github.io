@@ -30,9 +30,10 @@ body {
 }@-webkit-keyframes blink{
     to{visibility: hidden;}
 }
+
 .header h1{
     font-size: 3em;
-    font-family: exo, serif;
+    font-family: exo, serif; 
     color: rgb(255, 255, 255);
     text-shadow: 3px 3px 3px #1b1b1b;
 }
