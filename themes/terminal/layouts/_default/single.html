@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="post">
+  <h1>{{ .Title }}</h1>
+  <p class="post-date muted">{{ .Date.Format "2006-01-02" }}</p>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  {{ if eq .Section "blog" }}
+  <p class="back-link"><a href="/blog">← back to blog</a></p>
+  {{ end }}
+</article>
+{{ end }}

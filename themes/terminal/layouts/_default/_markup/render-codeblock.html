@@ -1,0 +1,13 @@
+<div class="code-block">
+  <div class="code-header">
+    <span class="dot dot-red"></span>
+    <span class="dot dot-yellow"></span>
+    <span class="dot dot-green-btn"></span>
+    {{ with .Type }}<span class="code-lang">{{ . }}</span>{{ end }}
+  </div>
+  {{ if .Type }}
+    {{ highlight .Inner .Type "lineNos=inline,lineNumbersInTable=false" }}
+  {{ else }}
+    <pre><code>{{- .Inner -}}</code></pre>
+  {{ end }}
+</div>

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="home">
+  <p>I write backend systems for a living and build things on the side<br>
+  that scratch a real itch — tools, side projects, automations.</p>
+
+  <pre class="coords">initialized @ 11.25°N 75.78°E
+compiled    @ 22.32°N 87.31°E
+running     @ 12.97°N 77.59°E</pre>
+
+  <p>writing to /dev/prod — <a href="https://retainiq.com" target="_blank" rel="noopener">retainiq.com</a></p>
+
+  <hr>
+
+  <p class="section-title">recent posts</p>
+  {{ $posts := where site.RegularPages "Section" "blog" }}
+  {{ range first 3 ($posts.ByDate.Reverse) }}
+  <p class="post-item"><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a> — <span class="muted">{{ .Date.Format "2006-01-02" }}</span></p>
+  {{ end }}
+
+  <hr>
+
+  <p class="links">
+    <span class="link-tag">[x]</span>  <a href="https://x.com/armedjuror" target="_blank" rel="noopener">x.com/armedjuror</a><br>
+    <span class="link-tag">[ig]</span> <a href="https://instagram.com/byteaftereight" target="_blank" rel="noopener">instagram.com/byteaftereight</a><br>
+    <span class="link-tag">[gh]</span> <a href="https://github.com/armedjuror" target="_blank" rel="noopener">github.com/armedjuror</a><br>
+    <span class="link-tag">[☕]</span> <a href="https://buymeacoffee.com/armedjuror" target="_blank" rel="noopener">buymeacoffee.com/armedjuror</a>
+  </p>
+</div>
+{{ end }}

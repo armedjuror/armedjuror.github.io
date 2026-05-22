@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="list-page">
+  <h1>// {{ .Title }}</h1>
+  {{ if eq .Section "blog" }}
+    {{ range .Pages.ByDate.Reverse }}
+    <p class="list-item"><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} — {{ .Title }}</a></p>
+    {{ end }}
+  {{ else if eq .Section "projects" }}
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $i, $p := $pages }}
+      {{ if gt $i 0 }}<hr>{{ end }}
+      <div class="project-block">
+        <p class="project-name"><a href="{{ $p.Params.link }}" target="_blank" rel="noopener">{{ $p.Title }}</a> — <span class="muted">status: {{ $p.Params.status }}</span></p>
+        <p class="muted project-date">date added: {{ $p.Date.Format "2006-01-02" }}</p>
+        <p>{{ $p.Content | plainify }}</p>
+        <p class="arrow-link"><span class="arrow">→</span> <a href="{{ $p.Params.link }}" target="_blank" rel="noopener">{{ $p.Params.link }}</a></p>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+baseURL = "https://armedjuror.in"
+locale = "en-us"
+title = "armedjuror"
+theme = "terminal"
+
+[params]
+  description = "armedjuror — backend systems, side projects, tools"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    noClasses = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
