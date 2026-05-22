@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="post">
   <h1>{{ .Title }}</h1>
-  <p class="post-date muted">{{ .Date.Format "2006-01-02" }}</p>
+  <p class="post-date muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min read</p>
   <div class="post-content">
     {{ .Content }}
   </div>
