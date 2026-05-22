@@ -14,7 +14,7 @@ running     @ 12.97°N 77.59°E</pre>
   <p class="section-title">recent posts</p>
   {{ $posts := where site.RegularPages "Section" "blog" }}
   {{ range first 3 ($posts.ByDate.Reverse) }}
-  <p class="post-item"><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a> — <span class="muted">{{ .Date.Format "2006-01-02" }}</span></p>
+  <p class="post-item"><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title | markdownify | replaceRE "^<p>(.*)</p>\n?$" "$1" | safeHTML }}</a> — <span class="muted">{{ .Date.Format "2006-01-02" }}</span></p>
   {{ end }}
 
   <hr>

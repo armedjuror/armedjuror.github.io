@@ -3,7 +3,7 @@
   <h1>// {{ .Title }}</h1>
   {{ if eq .Section "blog" }}
     {{ range .Pages.ByDate.Reverse }}
-    <p class="list-item"><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} — {{ .Title }}</a></p>
+    <p class="list-item"><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} — {{ .Title | markdownify | replaceRE "^<p>(.*)</p>\n?$" "$1" | safeHTML }}</a></p>
     {{ end }}
   {{ else if eq .Section "projects" }}
     {{ $pages := .Pages.ByDate.Reverse }}

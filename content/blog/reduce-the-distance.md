@@ -1,5 +1,5 @@
 ---
-title: "Solving the Speed Equation: Turbocharging an O(n) App to O(1)"
+title: "API Performance Tip: Reduce the distance."
 date: 2024-06-27
 draft: false
 ---
