@@ -1,0 +1,23 @@
+/* Applied only when scripts/build_pdfs.py renders a post to PDF. */
+@page {
+  size: A4;
+  margin: 16mm 15mm 18mm;
+  background: #0a0a0a;
+  @bottom-right { content: counter(page) " / " counter(pages); color: #555; font: 8pt 'JetBrains Mono', monospace; }
+  @bottom-left { content: "armedjuror.in"; color: #119e45; font: 8pt 'JetBrains Mono', monospace; }
+}
+html { font-size: 10pt; }
+body { background: #0a0a0a !important; background-image: none !important; padding: 0; line-height: 1.55; }
+nav, footer, .back-link, .pdf-link, .byte-buddy { display: none !important; }
+main { max-width: none; }
+.post h1 { font-size: 20pt; margin-bottom: 4pt; }
+.post-date { margin-bottom: 14pt; }
+.post-content { font-size: 10pt; line-height: 1.6; }
+.post-content h2 { font-size: 12pt; margin: 16pt 0 6pt; page-break-after: avoid; }
+.post-content h3 { font-size: 11pt; page-break-after: avoid; }
+.post-content p { margin-bottom: 8pt; }
+.post-content table { font-size: 8.5pt; page-break-inside: avoid; }
+.post-content th, .post-content td { padding: 3pt 5pt; }
+.post-content a { color: #119e45; text-decoration: none; word-break: break-all; }
+.code-block { page-break-inside: avoid; }
+.code-block pre { font-size: 8.5pt; white-space: pre-wrap; }

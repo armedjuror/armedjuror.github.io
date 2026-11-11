@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  # Rebuild hourly so posts dated in the future go live on their date
+  # (Hugo leaves future-dated posts out of the build until then).
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -29,6 +34,17 @@ jobs:
 
       - name: Build
         run: hugo --minify
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build PDFs
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 fonts-noto-core
+          pip install -q weasyprint
+          python scripts/build_pdfs.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
