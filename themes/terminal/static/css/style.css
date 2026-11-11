@@ -261,6 +261,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
   margin: 1.25rem 0;
   font-style: italic;
 }
+.pdf-link a { color: var(--accent); text-decoration: none; }
+.pdf-link a:hover { text-decoration: underline; }
 .back-link {
   margin-top: 4rem;
   font-family: 'JetBrains Mono', monospace;
