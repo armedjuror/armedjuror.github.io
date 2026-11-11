@@ -18,7 +18,7 @@
       <span class="byte-buddy-body"></span>
     </button>
   </div>
-  <script src="/js/byte-buddy.js" defer></script>
+  <script src="/js/byte-buddy.js?v={{ readFile "themes/terminal/static/js/byte-buddy.js" | md5 | truncate 8 "" }}" defer></script>
   {{ end }}
   {{ end }}
 </article>
