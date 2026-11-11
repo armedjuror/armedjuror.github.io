@@ -38,6 +38,7 @@ Post content goes here.
 - The filename becomes the URL slug: `content/blog/my-post.md` → `/blog/my-post`
 - Posts are listed on `/blog` ordered by date, newest first
 - The 3 most recent posts appear on the home page automatically
+- Every blog post gets Byte, the reading buddy (`themes/terminal/static/js/byte-buddy.js`): a progress ring that fills as you read, plus short messages at the start, 25%, halfway, the last 2 minutes and the end. Add `buddy: false` to the front matter to turn it off for one post.
 - Add `pdf: true` to the front matter to offer a PDF download. On deploy, `scripts/build_pdfs.py` renders the post with WeasyPrint (styled by `themes/terminal/static/css/pdf.css`) to `/blog/<slug>/<slug>.pdf`, and the post shows a "↓ download PDF" link next to the date. To preview locally: `hugo --minify && pip install weasyprint && python scripts/build_pdfs.py`
 
 ### Code blocks

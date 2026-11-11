@@ -7,6 +7,19 @@
   </div>
   {{ if eq .Section "blog" }}
   <p class="back-link"><a href="/blog">← back to blog</a></p>
+  {{ if ne .Params.buddy false }}
+  <div class="byte-buddy" data-minutes="{{ .ReadingTime }}">
+    <p class="byte-buddy-bubble" role="status" aria-live="polite"></p>
+    <button class="byte-buddy-btn" type="button" aria-label="Byte, your reading buddy: how much is left?">
+      <svg class="byte-buddy-ring" viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" pathLength="100" class="byte-buddy-track"/>
+        <circle cx="18" cy="18" r="16" pathLength="100" class="byte-buddy-bar"/>
+      </svg>
+      <span class="byte-buddy-body"></span>
+    </button>
+  </div>
+  <script src="/js/byte-buddy.js" defer></script>
+  {{ end }}
   {{ end }}
 </article>
 {{ end }}

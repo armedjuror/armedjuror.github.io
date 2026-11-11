@@ -8,7 +8,7 @@
 }
 html { font-size: 10pt; }
 body { background: #0a0a0a !important; background-image: none !important; padding: 0; line-height: 1.55; }
-nav, footer, .back-link, .pdf-link { display: none !important; }
+nav, footer, .back-link, .pdf-link, .byte-buddy { display: none !important; }
 main { max-width: none; }
 .post h1 { font-size: 20pt; margin-bottom: 4pt; }
 .post-date { margin-bottom: 14pt; }
