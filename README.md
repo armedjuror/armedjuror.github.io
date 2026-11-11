@@ -34,6 +34,7 @@ draft: false
 Post content goes here.
 ```
 
+- A post dated in the future stays hidden until that date and time; the deploy workflow rebuilds every hour, so it goes live within the hour. Use this to match a post to a reel's publish time, e.g. `date: 2026-11-14T19:30:00+05:30`.
 - Set `draft: true` while writing. Draft posts won't appear in production but will show locally with `hugo server -D`.
 - The filename becomes the URL slug: `content/blog/my-post.md` → `/blog/my-post`
 - Posts are listed on `/blog` ordered by date, newest first

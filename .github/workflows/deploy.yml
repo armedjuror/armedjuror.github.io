@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  # Rebuild hourly so posts dated in the future go live on their date
+  # (Hugo leaves future-dated posts out of the build until then).
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: read
