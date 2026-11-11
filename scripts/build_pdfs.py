@@ -30,7 +30,10 @@ def main():
         slug = slug.group(1) if slug else md.stem
         page = PUBLIC / "blog" / slug / "index.html"
         if not page.exists():
-            sys.exit(f"missing built page for {md.name}: {page}")
+            # Future-dated posts aren't built yet; their PDF is made on the
+            # scheduled rebuild that publishes them.
+            print(f"skip (not built yet, likely future-dated): {md.name}")
+            continue
         out = page.parent / f"{md.stem}.pdf"
         # Site pages link assets from the root (/css/style.css); point those into public/.
         html = re.sub(r'(href|src)=("?)/(?!/)', lambda m: f"{m.group(1)}={m.group(2)}{PUBLIC.as_uri()}/",
